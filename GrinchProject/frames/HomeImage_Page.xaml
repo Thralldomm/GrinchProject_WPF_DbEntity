@@ -11,40 +11,51 @@
     <Grid>
 
 
-        <DockPanel LastChildFill="True" 
-                   Name="MyDocky">
-            
-            <TextBlock DockPanel.Dock="Top"
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>   
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock Grid.Column="1"
+                   Grid.ColumnSpan="2" 
                        Name="PlaceAreaTextBlock"
-                       Height="30"
-                       Width="200"
-                       Text="{Binding Area}"/>
+                       Text="{Binding Area}" Margin="100,22,74,23"/>
 
 
-           
-
-            <Button DockPanel.Dock="Left" 
-                    x:Name="LeftButton"
-                    Content="Previous"
-                    Click="LeftButton_Click"/>
 
 
-            
-            <Button DockPanel.Dock="Right"
-                    x:Name="RightButton"
-                    Content="Next"
-                    Click="RightButton_Click"/>
+        <Image Grid.Row="1"
+                   Grid.RowSpan="2"
+                   Grid.Column="3"
+               Margin="10"
+            />
 
-           
-             <Button  DockPanel.Dock="Bottom"
-                    Name="GoBackButton"
-                    Click="GoBackButton_Click"
-                    Content="Go Back"/>
+        <Image Grid.Row="3"
+                   Grid.RowSpan="2"
+                   Grid.Column="3"
+               Margin="10"/>
 
 
-            <Image x:Name="MyImage" Source="{Binding DayImagePath}">
-                
-            </Image>
-        </DockPanel>
+
+
+        <Image x:Name="MyImage"
+               Grid.Row="1"
+               Grid.RowSpan="5"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"
+               
+                   Source="{Binding DayImagePath}"  />
     </Grid>
 </Page>

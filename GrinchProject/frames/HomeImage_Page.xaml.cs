@@ -36,8 +36,9 @@ namespace GrinchProject.frames
             {
                 if(AreaName == "town")
                 {
+                    Place a = db.Places.Where(b => b.Area == "town") as Place;
 
-                    MyDocky.DataContext = db.Places.Where(b => b.Area == "town").ToList();
+                    PlaceAreaTextBlock.Text = a.Area;
 
 
                 }

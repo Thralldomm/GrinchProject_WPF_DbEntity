@@ -9,10 +9,10 @@
 
   <ItemGroup>
     <None Remove="frames\map_images\day_map.jpg" />
-    <None Remove="frames\map_images\houses\bricklebaum_house_day.jpg" />
-    <None Remove="frames\map_images\houses\bricklebaum_house_night.jpg" />
-    <None Remove="frames\map_images\houses\grinch_house.png" />
-    <None Remove="frames\map_images\houses\whoville_night.jpg" />
+    <None Remove="houses\bricklebaum_house_day.jpg" />
+    <None Remove="houses\bricklebaum_house_night.jpg" />
+    <None Remove="houses\grinch_house.png" />
+    <None Remove="houses\whoville_night.jpg" />
     <None Remove="frames\map_images\map_night_with_goat.jpg" />
   </ItemGroup>
 
@@ -34,16 +34,16 @@
     <Resource Include="frames\map_images\day_map.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="frames\map_images\houses\bricklebaum_house_day.jpg">
+    <Resource Include="houses\bricklebaum_house_day.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="frames\map_images\houses\bricklebaum_house_night.jpg">
+    <Resource Include="houses\bricklebaum_house_night.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="frames\map_images\houses\grinch_house.png">
+    <Resource Include="houses\grinch_house.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="frames\map_images\houses\whoville_night.jpg">
+    <Resource Include="houses\whoville_night.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="frames\map_images\map_night_with_goat.jpg">

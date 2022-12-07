@@ -67,6 +67,8 @@ Microsoft.EntityFrameworkCore.Tools
 Scaffold-DbContext "Server=(localdb)\mssqllocaldb;Database=SportStore;Trusted_Connection=True" Microsoft.EntityFramworkCore.SqlServer -OutputDir Models
 ```
 
+Если BUILD FAILED без сообщения об ошибке, значит, в самом проекте есть ошибки. Надо убедиться, что проект полностью собирается
+
 4. В созданном контексте изменить метод OnConfiguring:
 
 ```
@@ -102,8 +104,11 @@ Therefore, it is almost always preferable to use a Grid instead of a StackPanel 
 
 ### DockPanel
 
-```
-<DockPanel LastChildFill="True" 
+        ```
+        <Grid>
+
+
+        <DockPanel LastChildFill="True" 
                    Name="MyDocky">
             
             <TextBlock DockPanel.Dock="Top"
@@ -112,12 +117,15 @@ Therefore, it is almost always preferable to use a Grid instead of a StackPanel 
                        Width="200"
                        Text="{Binding Area}"/>
 
+
            
 
             <Button DockPanel.Dock="Left" 
                     x:Name="LeftButton"
                     Content="Previous"
                     Click="LeftButton_Click"/>
+
+
             
             <Button DockPanel.Dock="Right"
                     x:Name="RightButton"
@@ -125,30 +133,15 @@ Therefore, it is almost always preferable to use a Grid instead of a StackPanel 
                     Click="RightButton_Click"/>
 
            
-             <Button  DockPanel.Dock="Bottom"
-                    Name="GoBackButton"
-                    Click="GoBackButton_Click"
-                    Content="Go Back"/>
+            
 
-            <Image x:Name="myImage"
+            <Image x:Name="MyImage" Source="{Binding DayImagePath}">
                 
-			    >
-
-                <Image.Source>
-
-                    <Binding Path="DayImage" >
-
-                        <Binding.TargetNullValue>
-                            <ImageSource>map_images/day_map.jpg</ImageSource>
-                        </Binding.TargetNullValue>
-
-                    </Binding>
-                </Image.Source>
             </Image>
-
         </DockPanel>
+    </Grid>
+    ```
 
-        ```
 
         DockPanel ставит 4 элемента по заданным позициям (верх, низ, право, лево).\
 
@@ -156,6 +149,6 @@ Therefore, it is almost always preferable to use a Grid instead of a StackPanel 
 
 
 
- ### Не отображалось изображение 
+ #### Не отображалось изображение 
 
-        Прописать полный путь в таблице
+  Прописать полный путь в таблице
