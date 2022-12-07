@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\123\source\repos\GrinchProject\GrinchProject\App.xaml
-11407045341
+31521099255
 
-5-2112928747
-194618410957
-MainWindow.xaml;
+11-523703377
+2221721199432
+frames\HomeImage_Page.xaml;frames\MapPage.xaml;MainWindow.xaml;
 
-False
+True
 

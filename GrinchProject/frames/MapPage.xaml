@@ -1,0 +1,30 @@
+﻿<Page x:Class="GrinchProject.frames.MapPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GrinchProject.frames"
+      mc:Ignorable="d" 
+      d:DesignHeight="370" d:DesignWidth="700"
+      Title="MapPage"
+      ShowsNavigationUI="False"
+      >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        
+        <Image Source="map_images/day_map.jpg"
+               
+               x:Name="Map_Image"
+               MouseDown="Map_Image_MouseDown"
+               Grid.Row="0"/>
+        
+        <TextBlock x:Name="cursor_textblock"
+                   Height="20"
+                   Width="200"
+                   Grid.Row="1"/>
+    </Grid>
+</Page>
