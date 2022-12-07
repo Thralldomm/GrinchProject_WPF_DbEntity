@@ -28,10 +28,19 @@ namespace GrinchProject.frames
 
             using(GrinchContext db = new GrinchContext())
             {
-                Character_ListView.DataContext = db.Characters.ToList();
+                Character_ListView.ItemsSource = db.Characters.ToList();
 
                 Main_Character_Grid.DataContext = character;
+
+                
             }
+
+            //TODO: Поменять в xaml placeId на название места
+        }
+
+        private void Character_ListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("new page with new context");
         }
     }
 }

@@ -32,6 +32,7 @@
                    Grid.Row="0"
                    Grid.RowSpan="3"
                    Grid.Column="1"
+                Stretch="Uniform"
                 Source="{Binding ImagePath}"/>
 
 
@@ -60,6 +61,7 @@
 
         <ListView Name="Character_ListView"
                   Grid.Row="1"
+                  MouseDoubleClick="Character_ListView_MouseDoubleClick"
                   >
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -67,7 +69,7 @@
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
 
-            <ListView.ItemTemplate>
+            <ListView.ItemTemplate> 
                 <DataTemplate>
                     <Grid>
                         <Grid.RowDefinitions>
@@ -79,16 +81,33 @@
 
 
                         <TextBlock x:Name="Character_Name_TextBlock"
-                                   Text="{Binding Name}"/>
+                                   Text="{Binding Name}"
+                                   Grid.Row="0"
+                                   Height="30"
+                                   Width="150"
+                                   />
                         
                         <Image x:Name="Character_Image"
-                                Source="{Binding ImagePath}"/>
+                                Source="{Binding ImagePath}"
+                               Grid.Row="1"
+                               Height="80"
+                               Width="80" 
+                               Stretch="Uniform"
+                               />
                         
                         <TextBlock x:Name="Description_TextBlock"
-                                    Text="{Binding Description}"/>
+                                    Text="{Binding Description}"
+                                   Grid.Row="2"
+                                   Height="40"
+                                   Width="150"
+                                   />
                         
                         <TextBlock x:Name="Area_TextBlock"
-                                    Text="{Binding PlaceId}"/>
+                                    Text="{Binding Area}"
+                                   Grid.Row="3"
+                                   Height="30"
+                                   Width="150"
+                                   />
 
                     </Grid>
 
