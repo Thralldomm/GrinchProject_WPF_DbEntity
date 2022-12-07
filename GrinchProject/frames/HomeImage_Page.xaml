@@ -9,42 +9,42 @@
       Title="HomeImage_Page">
 
     <Grid>
-    
+
 
         <DockPanel LastChildFill="True" 
                    Name="MyDocky">
             
             <TextBlock DockPanel.Dock="Top"
                        Name="PlaceAreaTextBlock"
+                       Height="30"
+                       Width="200"
                        Text="{Binding Area}"/>
+
 
            
 
             <Button DockPanel.Dock="Left" 
                     x:Name="LeftButton"
+                    Content="Previous"
                     Click="LeftButton_Click"/>
+
+
             
             <Button DockPanel.Dock="Right"
                     x:Name="RightButton"
+                    Content="Next"
                     Click="RightButton_Click"/>
 
-            <Image x:Name="HomeImage"
-                   Height="300"
-                   Width="300"
-                   >
-                <Image.Source>
-                    <Binding Path="DayImage">
-
-                    </Binding>
-                </Image.Source>
-            </Image>
-
-           <!--" <Button  DockPanel.Dock="Bottom"
+           
+             <Button  DockPanel.Dock="Bottom"
                     Name="GoBackButton"
                     Click="GoBackButton_Click"
                     Content="Go Back"/>
-            -->
-            
+
+
+            <Image x:Name="MyImage" Source="{Binding DayImagePath}">
+                
+            </Image>
         </DockPanel>
     </Grid>
 </Page>

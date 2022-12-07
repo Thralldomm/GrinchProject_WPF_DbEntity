@@ -47,28 +47,43 @@ namespace GrinchProject.frames
                 {
                     //открываем страницу с фото, передаем mountain для контекста
                
-                    mainWindow.MainFrame.Navigate(new HomeImage_Page(mainWindow));
+                    mainWindow.MainFrame.Navigate(new HomeImage_Page(mainWindow, "mountain"));
                 }
                 
             }
 
             else if (list[0] > 607 && list[0] < 1025 && list[1] > 79 && list[1] < 435)
-            {
-                MessageBox.Show("Town");
-                 
+            { 
+                if (MessageBox.Show("Town", "Area", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                { 
+                    mainWindow.MainFrame.Navigate(new HomeImage_Page(mainWindow, "town"));
+                }
+
             }
 
             else if (list[0] > 130 && list[0] < 400 && list[1] > 43 && list[1] < 568)
-            {
-                MessageBox.Show("Forest");
-                 
+            { 
+                if (MessageBox.Show("Forest", "Area", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                { 
+                    mainWindow.MainFrame.Navigate(new HomeImage_Page(mainWindow, "forest"));
+                }
             }
 
            else 
             {
-                MessageBox.Show("Sky");
-                
+                MessageBox.Show("Sky"); 
             }
+        }
+
+
+      //TODO: При нажатии некбокс - меняется режим на ночной - и обратно
+        private void Mode_CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            //Map_Image.Source = new BitmapImage(new Uri(@"\map_images\map_night_with_goat.jpg", UriKind.Relative));
+        }
+
+        private void Mode_CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        { 
         }
     }
 }

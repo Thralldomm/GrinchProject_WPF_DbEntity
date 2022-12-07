@@ -11,9 +11,9 @@ public partial class Character
 
     public string Description { get; set; } = null!;
 
-    public string Photo { get; set; } = null!;
-
     public int PlaceId { get; set; }
+
+    public string? ImagePath { get; set; }
 
     public virtual ICollection<Friend> FriendCharacters { get; } = new List<Friend>();
 

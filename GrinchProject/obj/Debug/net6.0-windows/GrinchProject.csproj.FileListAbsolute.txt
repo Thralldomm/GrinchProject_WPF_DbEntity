@@ -1,3 +1,10 @@
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\GrinchProject.csproj.AssemblyReference.cache
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\HomeImage_Page.g.cs
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\MapPage.g.cs
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\GrinchProject_MarkupCompile.cache
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\GrinchProject_MarkupCompile.lref
 C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\GrinchProject.exe
 C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\GrinchProject.dll.config
 C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\GrinchProject.deps.json
@@ -39,6 +46,7 @@ C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\S
 C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
 C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
 C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\ToggleSwitch.dll
 C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
@@ -47,11 +55,9 @@ C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\r
 C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\123\source\repos\GrinchProject\GrinchProject\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\GrinchProject.csproj.AssemblyReference.cache
-C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\App.g.cs
-C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\GrinchProject_MarkupCompile.cache
-C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\GrinchProject_MarkupCompile.lref
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\App.baml
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\HomeImage_Page.baml
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\MapPage.baml
 C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\GrinchProject.g.resources
 C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\GrinchProject.GeneratedMSBuildEditorConfig.editorconfig
@@ -64,8 +70,3 @@ C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\r
 C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\GrinchProject.pdb
 C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\GrinchProject.genruntimeconfig.cache
 C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\ref\GrinchProject.dll
-C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\MapPage.g.cs
-C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\MapPage.baml
-C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\HomeImage_Page.g.cs
-C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\App.baml
-C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\HomeImage_Page.baml

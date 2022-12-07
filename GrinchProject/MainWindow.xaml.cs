@@ -1,5 +1,5 @@
 ﻿using GrinchProject.frames;
-using GrinchProject.Models;
+//using GrinchProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,13 +25,7 @@ namespace GrinchProject
         public MainWindow()
         {
             InitializeComponent();
-
-
-            using (GrinchContext db = new GrinchContext())
-            {
-                //MyComboBox.ItemsSource = db.Places.Select(b => b.Area).Distinct().ToList();
-                 
-            }
+             
         }
          
 
@@ -40,21 +34,14 @@ namespace GrinchProject
             MainFrame.Navigate(new MapPage(this));
         }
 
-        //TODO: При нажатии на кнопку выводится карта местности. Нажав мышью в определенное место, можно выбрать какой то район.
-        //для этого надо проверить координаты мыши и отследить клик
-
-        //Mouse.GetPosition(Application.Current.MainWindow);
-
-        //нажимаем на место на карте - выходит сообщение с названием тыкнутого места (йес  ноу, йес - идем в это место.  ноу - просто закрвыаем месседж бокс)
-
-
-        //заменить clif -> mountain
+        
+         
+         
 
         //TODO: Добавить поле Фото в табличку Друзья для каждой комбинации
         //отображать фотот друзей при выборе (придумать как выбирать)
 
-        //TODO: Добавить оленя Фреда в табличку
-
+         
         //TODO: Добавить поля фото_день и фото_ночь в таблицу Место и отображать при выборе на карте.
         //Также сделать переключатель (радио баттон) для дневного и ночного режимов
 

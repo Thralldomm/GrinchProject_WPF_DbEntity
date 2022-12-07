@@ -98,3 +98,64 @@ DockPanel
 
 Therefore, it is almost always preferable to use a Grid instead of a StackPanel unless you do not want automatic resizing to occur. Please note that it is still possible for a Grid to not size its inner controls... it all depends on your Grid.RowDefinition and Grid.ColumnDefinition settings:
 
+
+
+### DockPanel
+
+```
+<DockPanel LastChildFill="True" 
+                   Name="MyDocky">
+            
+            <TextBlock DockPanel.Dock="Top"
+                       Name="PlaceAreaTextBlock"
+                       Height="30"
+                       Width="200"
+                       Text="{Binding Area}"/>
+
+           
+
+            <Button DockPanel.Dock="Left" 
+                    x:Name="LeftButton"
+                    Content="Previous"
+                    Click="LeftButton_Click"/>
+            
+            <Button DockPanel.Dock="Right"
+                    x:Name="RightButton"
+                    Content="Next"
+                    Click="RightButton_Click"/>
+
+           
+             <Button  DockPanel.Dock="Bottom"
+                    Name="GoBackButton"
+                    Click="GoBackButton_Click"
+                    Content="Go Back"/>
+
+            <Image x:Name="myImage"
+                
+			    >
+
+                <Image.Source>
+
+                    <Binding Path="DayImage" >
+
+                        <Binding.TargetNullValue>
+                            <ImageSource>map_images/day_map.jpg</ImageSource>
+                        </Binding.TargetNullValue>
+
+                    </Binding>
+                </Image.Source>
+            </Image>
+
+        </DockPanel>
+
+        ```
+
+        DockPanel ставит 4 элемента по заданным позициям (верх, низ, право, лево).\
+
+        Последний элемент, которому позиция не задана ставится по середине (обязательно указать его последним). С помощью свойства LastChildFill=true последнему элементу достается все оставшееся свободное пространство
+
+
+
+ ### Не отображалось изображение 
+
+        Прописать полный путь в таблице

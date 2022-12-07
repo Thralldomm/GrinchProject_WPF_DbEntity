@@ -6,17 +6,29 @@
         xmlns:local="clr-namespace:GrinchProject"
         mc:Ignorable="d"
         Title="WhoVille" 
-        
-        WindowStartupLocation="CenterScreen" WindowState="Maximized" Topmost="True">
-    <Grid>
+         
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized" Topmost="True"
+        >
+
+   
+
+<Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Frame Name="MainFrame"  Grid.Row="1"/>
+    
+        <Frame Name="MainFrame" 
+               NavigationUIVisibility="Hidden"
+               Grid.Row="1"/>
+    
         <Button Name="Map_Button" Height="30" Width="130" Content="Map" 
                 Click="Map_Button_Click"
                  Grid.Row="2"/>
-    </Grid>
+    
+    
+   
+</Grid>
 </Window>

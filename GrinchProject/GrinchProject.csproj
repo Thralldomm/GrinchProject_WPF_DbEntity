@@ -13,6 +13,7 @@
     <None Remove="frames\map_images\houses\bricklebaum_house_night.jpg" />
     <None Remove="frames\map_images\houses\grinch_house.png" />
     <None Remove="frames\map_images\houses\whoville_night.jpg" />
+    <None Remove="frames\map_images\map_night_with_goat.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +27,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="ToggleSwitch" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,6 +44,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="frames\map_images\houses\whoville_night.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="frames\map_images\map_night_with_goat.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

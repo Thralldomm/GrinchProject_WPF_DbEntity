@@ -9,6 +9,8 @@
       Title="MapPage"
       ShowsNavigationUI="False"
       >
+    
+    
 
     <Grid>
         <Grid.RowDefinitions>
@@ -26,5 +28,15 @@
                    Height="20"
                    Width="200"
                    Grid.Row="1"/>
+
+        <CheckBox  
+                  Style="{DynamicResource CheckBoxStyle1}"
+                  Height="30"
+                  Width="250"
+                  Name="Mode_CheckBox"
+                  Grid.Row="1"
+                  HorizontalAlignment="Right"
+                  Checked="Mode_CheckBox_Checked"
+                  Unchecked="Mode_CheckBox_Unchecked"/>
     </Grid>
 </Page>

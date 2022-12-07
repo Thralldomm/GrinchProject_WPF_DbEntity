@@ -11,6 +11,8 @@ public partial class Friend
 
     public int CharacterId { get; set; }
 
+    public string? ImagePath { get; set; }
+
     public virtual Character Character { get; set; } = null!;
 
     public virtual Character FriendCharacter { get; set; } = null!;

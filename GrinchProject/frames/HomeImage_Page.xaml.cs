@@ -22,21 +22,32 @@ namespace GrinchProject.frames
     public partial class HomeImage_Page : Page
     {
         MainWindow mainWindow;
-        public HomeImage_Page(MainWindow mainWindow)
+        public HomeImage_Page(MainWindow mainWindow,
+                                string AreaName)
         {
             InitializeComponent();
 
             this.mainWindow = mainWindow;
 
+
+            //statusUser.Text = user.RoleNavigation.Name;
+
             using(GrinchContext db = new GrinchContext())
             {
-                MyDocky.DataContext = db.Places.Where(b => b.Id == 1).ToList();
+                if(AreaName == "town")
+                {
+
+                    MyDocky.DataContext = db.Places.Where(b => b.Area == "town").ToList();
+
+
+                }
             }
+           
         }
 
         private void GoBackButton_Click(object sender, RoutedEventArgs e)
         {
-
+            mainWindow.MainFrame.Navigate(new MapPage(mainWindow));
         }
 
         private void LeftButton_Click(object sender, RoutedEventArgs e)
@@ -45,6 +56,11 @@ namespace GrinchProject.frames
         }
 
         private void RightButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ModeToggleButton_Checked(object sender, RoutedEventArgs e)
         {
 
         }
