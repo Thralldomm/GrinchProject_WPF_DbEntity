@@ -36,11 +36,11 @@ namespace GrinchProject.frames
             {
                 if(AreaName == "town")
                 {
-                    Place a = db.Places.Where(b => b.Area == "town") as Place;
+                    mainGrid.DataContext = db.Places.Where(d => d.Area == "town").ToList();
 
-                    PlaceAreaTextBlock.Text = a.Area;
-
-
+                    var a = db.Characters.Where(r => r.PlaceId == 1).ToList();
+                    first_Character_Image.DataContext = a[0];
+                    second_Character_Image.DataContext = a[1];
                 }
             }
            

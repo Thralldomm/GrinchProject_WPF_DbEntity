@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="HomeImage_Page">
 
-    <Grid>
+    <Grid x:Name="mainGrid">
 
 
         <Grid.RowDefinitions>
@@ -33,22 +33,23 @@
                        Name="PlaceAreaTextBlock"
                        Text="{Binding Area}" Margin="100,22,74,23"/>
 
-
-
-
-        <Image Grid.Row="1"
+ 
+            <Image x:Name="first_Character_Image"
+                Grid.Row="1"
                    Grid.RowSpan="2"
                    Grid.Column="3"
                Margin="10"
+                    Source="{Binding ImagePath}" 
             />
 
-        <Image Grid.Row="3"
+            <Image x:Name="second_Character_Image"
+            Grid.Row="3"
                    Grid.RowSpan="2"
                    Grid.Column="3"
-               Margin="10"/>
-
-
-
+               Margin="10"
+                    Source="{Binding ImagePath}" 
+                   />
+       
 
         <Image x:Name="MyImage"
                Grid.Row="1"
