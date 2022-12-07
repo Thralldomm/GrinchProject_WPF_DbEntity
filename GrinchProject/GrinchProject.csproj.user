@@ -7,11 +7,17 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="frames\HomeImage_Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="frames\MapPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="frames\HomeImage_Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="frames\MapPage.xaml">
       <SubType>Designer</SubType>
     </Page>

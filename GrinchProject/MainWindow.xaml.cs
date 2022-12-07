@@ -37,7 +37,7 @@ namespace GrinchProject
 
         private void Map_Button_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new MapPage());
+            MainFrame.Navigate(new MapPage(this));
         }
 
         //TODO: При нажатии на кнопку выводится карта местности. Нажав мышью в определенное место, можно выбрать какой то район.

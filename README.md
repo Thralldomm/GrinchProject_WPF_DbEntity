@@ -74,3 +74,27 @@ optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ConnectionLo
 ```
 
 - это для того, чтобы прямого доступа к строке подключения у нас не было. Эта строка идет в App.config -> ConnectionStrings, ищет сторку подключения с указанным именем и превращает ее в строку
+
+
+
+
+
+## Adjusting elements to the window size
+
+In WPF there are certain 'container' controls that automatically resize their contents and there are some that don't.
+
+Here are some that do not resize their contents (I'm guessing that you are using one or more of these):
+
+StackPanel
+WrapPanel
+Canvas
+TabControl
+
+Here are some that do resize their contents:
+
+Grid
+UniformGrid
+DockPanel
+
+Therefore, it is almost always preferable to use a Grid instead of a StackPanel unless you do not want automatic resizing to occur. Please note that it is still possible for a Grid to not size its inner controls... it all depends on your Grid.RowDefinition and Grid.ColumnDefinition settings:
+

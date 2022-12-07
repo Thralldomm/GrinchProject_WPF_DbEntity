@@ -69,7 +69,7 @@ namespace GrinchProject.frames {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GrinchProject;V1.0.0.0;component/frames/mappage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GrinchProject;component/frames/mappage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\frames\MapPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

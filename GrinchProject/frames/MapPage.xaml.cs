@@ -20,10 +20,13 @@ namespace GrinchProject.frames
     /// </summary>
     public partial class MapPage : Page
     {
-        public MapPage()
+
+        MainWindow mainWindow;
+        public MapPage(MainWindow mainWindow)
         {
             InitializeComponent();
 
+            this.mainWindow = mainWindow;
            
         }
 
@@ -36,9 +39,16 @@ namespace GrinchProject.frames
 
             List<int> list = str.Split(';').Select(x => Convert.ToInt32(x)).ToList();
 
+
+           
             if (list[0] > 244 && list[0]<293 && list[1]>155)
-            {
-                MessageBox.Show("Mountain");
+            { 
+                if (MessageBox.Show("Mountain", "Area", MessageBoxButton.YesNo)==MessageBoxResult.Yes)
+                {
+                    //открываем страницу с фото, передаем mountain для контекста
+               
+                    mainWindow.MainFrame.Navigate(new HomeImage_Page(mainWindow));
+                }
                 
             }
 
