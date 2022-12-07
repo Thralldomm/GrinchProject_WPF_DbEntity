@@ -70,3 +70,5 @@ C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\r
 C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\GrinchProject.pdb
 C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\GrinchProject.genruntimeconfig.cache
 C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\ref\GrinchProject.dll
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\CharacterPage.g.cs
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\CharacterPage.baml

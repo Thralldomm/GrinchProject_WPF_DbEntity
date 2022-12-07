@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="frames\CharacterPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="frames\HomeImage_Page.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -15,6 +18,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="frames\CharacterPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="frames\HomeImage_Page.xaml">
       <SubType>Designer</SubType>
     </Page>

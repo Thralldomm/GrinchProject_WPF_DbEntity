@@ -22,13 +22,16 @@ namespace GrinchProject.frames
     public partial class HomeImage_Page : Page
     {
         MainWindow mainWindow;
+
+        List<Character>? b;
+
+
         public HomeImage_Page(MainWindow mainWindow,
                                 string AreaName)
         {
             InitializeComponent();
 
             this.mainWindow = mainWindow;
-
 
             //statusUser.Text = user.RoleNavigation.Name;
 
@@ -41,29 +44,24 @@ namespace GrinchProject.frames
                     var a = db.Characters.Where(r => r.PlaceId == 1).ToList();
                     first_Character_Image.DataContext = a[0];
                     second_Character_Image.DataContext = a[1];
+
+                    b = a;
                 }
             }
            
         }
 
-        private void GoBackButton_Click(object sender, RoutedEventArgs e)
-        {
-            mainWindow.MainFrame.Navigate(new MapPage(mainWindow));
-        }
-
-        private void LeftButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RightButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        
         private void ModeToggleButton_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void first_Character_Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+             
+               mainWindow.MainFrame.Navigate(new CharacterPage(b[0]));
+             
         }
     }
 }
