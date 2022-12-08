@@ -10,8 +10,11 @@
             <Setter Property="Height" Value="30"></Setter>
         </Style>
 
- 
-            <Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
+       
+
+
+
+        <Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
                 <Setter Property="Foreground"
                     Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
                 <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>

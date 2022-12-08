@@ -27,7 +27,13 @@
                 <ColumnDefinition Width="1.5*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            
+
+            <Button Grid.Column="0"
+                    Grid.Row="0"
+                    Content="Add"
+                    Name="Add_Button"
+                    Click="Add_Button_Click"/>
+
             <Image 
                    Grid.Row="0"
                    Grid.RowSpan="3"
@@ -62,6 +68,7 @@
         <ListView Name="Character_ListView"
                   Grid.Row="1"
                   MouseDoubleClick="Character_ListView_MouseDoubleClick"
+                  
                   >
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>

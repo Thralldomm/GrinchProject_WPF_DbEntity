@@ -39,7 +39,13 @@ namespace GrinchProject.frames
             }
 
             //TODO: Поменять в xaml placeId на название места
+
+            //TODO: Добавить страницу для добавления и редактирования объектов
+
+            //TODO: Добавить окно авторизации: если вы есть в системе, можно редактировать, если нет - зайти гостем и спрятать кнопки
         }
+
+
 
         private void Character_ListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -48,9 +54,20 @@ namespace GrinchProject.frames
             
         }
 
+
+        /// <summary>
+        /// Передать контекстом объект ListView кнопку которого нажали и открыть страницу CharacterPage
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void character_button_Click(object sender, RoutedEventArgs e)
         {
             mainWindow.MainFrame.Navigate(new CharacterPage((sender as Button).DataContext as Character, mainWindow));
+        }
+
+        private void Add_Button_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.MainFrame.Navigate(new Add_Page(null, mainWindow));
         }
     }
 }

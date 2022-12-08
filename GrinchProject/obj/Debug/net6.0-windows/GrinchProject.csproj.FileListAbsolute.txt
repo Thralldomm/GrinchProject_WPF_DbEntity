@@ -72,3 +72,5 @@ C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\G
 C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\ref\GrinchProject.dll
 C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\CharacterPage.g.cs
 C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\CharacterPage.baml
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\Add_Page.g.cs
+C:\Users\123\source\repos\GrinchProject\GrinchProject\obj\Debug\net6.0-windows\frames\Add_Page.baml

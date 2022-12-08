@@ -152,3 +152,54 @@ Therefore, it is almost always preferable to use a Grid instead of a StackPanel 
  #### Не отображалось изображение 
 
   Прописать полный путь в таблице
+
+
+  ### Передать контекстом объект ListView кнопку которого нажали
+
+  ```
+   private void character_button_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.MainFrame.Navigate(new CharacterPage((sender as Button).DataContext as Character, mainWindow));
+        }
+        ```
+
+
+        В конструкторе страницы, на котору. переходим
+
+        ```
+  public CharacterPage(Character character) 
+        {
+              Main_Character_Grid.DataContext = character;
+
+            }
+            ```
+
+
+            ### Добавить изображение
+
+            ```
+              private void Night_Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Stream mystream;
+
+            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
+
+            if(dialog.ShowDialog() == true)
+            {
+                if((mystream = dialog.OpenFile()) != null)
+                {
+                    string filename = dialog.FileName;
+
+                  //  dialog.DefaultExt = ".png";
+                  //  dialog.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+                   // dialog.Title = "Open Image";
+                   // dialog.InitialDirectory = @"C:\Users\123\";
+
+
+                    BitmapImage image = new BitmapImage(new Uri(filename));
+                    Night_Image.Source = image;
+
+                }
+            }
+        }
+        ```
