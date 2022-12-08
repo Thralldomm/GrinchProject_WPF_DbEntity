@@ -11,6 +11,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -67,13 +68,35 @@
                        Height="30"
                        Width="200"/>
         </Grid>
-           
-             
-         
+
+
+        <Grid Name="SFF_Grid"
+              Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <TextBlock Name="Sort" Grid.Column="0"/>
+            <ComboBox Name="Sort_ComboBox"
+                      Grid.Column="0"/>
+            
+            <TextBlock x:Name="Filter" Grid.Column="1"/>
+            <ComboBox Name="Filter_ComboBox"
+                      Grid.Column="1"/>
+
+            <TextBlock Name="Search" Grid.Column="2"/>
+            <TextBox x:Name="Search_TextBox"
+                     TextChanged="Search_TextBox_TextChanged"
+                     Grid.Column="2"/>
+            
+        </Grid>
 
 
         <ListView Name="Character_ListView"
-                  Grid.Row="1"
+                  Grid.Row="2"
                   MouseDoubleClick="Character_ListView_MouseDoubleClick"
                   
                   >
@@ -115,7 +138,7 @@
                                     Text="{Binding Description}"
                                    Grid.Row="2"
                                    Height="40"
-                                   Width="150"
+                                   Width="30"
                                    />
                         
                         <TextBlock x:Name="Area_TextBlock"

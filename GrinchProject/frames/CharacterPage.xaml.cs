@@ -96,5 +96,15 @@ namespace GrinchProject.frames
         {
             mainWindow.MainFrame.Navigate(new Add_Page((sender as Button).DataContext as Character, mainWindow));
         }
+
+        private void Search_TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            using(GrinchContext db = new GrinchContext())
+            {
+                var found = db.Characters.Where(u => u.Name.Contains(Search_TextBox.Text) || u.Description.Contains(Search_TextBox.Text)).ToList();
+                 
+                Character_ListView.ItemsSource = found;
+            }
+        }
     }
 }
