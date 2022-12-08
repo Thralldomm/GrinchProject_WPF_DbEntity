@@ -21,6 +21,10 @@ namespace GrinchProject.frames
     public partial class Add_Page : Page
     {
         MainWindow mainWindow;
+
+        Character character = new Character();
+
+
         public Add_Page(Character character, MainWindow mainWindow)
         {
             InitializeComponent();
@@ -28,15 +32,19 @@ namespace GrinchProject.frames
             this.mainWindow = mainWindow;
 
             GrinchContext db = new GrinchContext();
-            Place_ComboBox.ItemsSource = db.Places.Select(b => b.Id).Distinct().ToList();
+            Place_ComboBox.ItemsSource = db.Characters.Select(b => b.PlaceId).Distinct().ToList();
 
-          //  if (character == null)  {   }   // установить текст комбобоксу
+            if (character != null)
+            {
+                this.character = character;
+            }
+
+            Character_Grid.DataContext = this.character;
         }
 
         private void Ok_Button_Click(object sender, RoutedEventArgs e)
         {
-            Character character = new Character();
-            
+           
             character.Name = Name_TextBox.Text;
             character.Description = Description_TextBox.Text;
             character.ImagePath = Day_Image.Source.ToString();

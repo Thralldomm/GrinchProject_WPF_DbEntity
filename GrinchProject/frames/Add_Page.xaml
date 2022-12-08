@@ -28,7 +28,7 @@
     </Page.Resources>
     
     
-    <Grid>
+    <Grid x:Name="Character_Grid">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"/>
             <RowDefinition/> 

@@ -69,5 +69,27 @@ namespace GrinchProject.frames
         {
             mainWindow.MainFrame.Navigate(new Add_Page(null, mainWindow));
         }
+
+        private void Delete_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var selected = Character_ListView.SelectedItems.Cast<Character>().ToList();
+
+            using(GrinchContext db = new GrinchContext())
+            {
+                foreach (var a in selected)
+                {
+                    db.Characters.Attach(a);
+                }
+
+                db.RemoveRange(selected);
+                db.SaveChanges();
+
+
+                Character_ListView.ItemsSource = db.Characters.ToList();
+
+                
+            }
+            
+        }
     }
 }
