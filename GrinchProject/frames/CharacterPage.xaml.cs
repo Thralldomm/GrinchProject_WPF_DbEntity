@@ -21,10 +21,13 @@ namespace GrinchProject.frames
     /// </summary>
     public partial class CharacterPage : Page
     {
-        public CharacterPage(Character character)  //character object
+
+        MainWindow mainWindow;
+        public CharacterPage(Character character, MainWindow mainWindow)  //character object
         {
             InitializeComponent();
 
+            this.mainWindow = mainWindow;
 
             using(GrinchContext db = new GrinchContext())
             {
@@ -41,6 +44,13 @@ namespace GrinchProject.frames
         private void Character_ListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             MessageBox.Show("new page with new context");
+
+            
+        }
+
+        private void character_button_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.MainFrame.Navigate(new CharacterPage((sender as Button).DataContext as Character, mainWindow));
         }
     }
 }

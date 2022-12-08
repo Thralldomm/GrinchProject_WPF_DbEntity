@@ -60,7 +60,7 @@ namespace GrinchProject.frames
         private void first_Character_Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
              
-               mainWindow.MainFrame.Navigate(new CharacterPage(b[0]));
+               mainWindow.MainFrame.Navigate(new CharacterPage(b[0], mainWindow));
              
         }
     }
