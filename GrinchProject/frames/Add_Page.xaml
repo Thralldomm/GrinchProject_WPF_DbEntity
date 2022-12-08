@@ -44,6 +44,7 @@
         
         <TextBox x:Name="Name_TextBox"
                  Grid.Row="0"
+                 Text="{Binding Name}"
                  />
 
         
@@ -52,6 +53,7 @@
                    />
         <Image Name="Day_Image"
                Grid.Row="1" 
+               Source="{Binding ImagePath}"
                />
 
         <Button Content="Add Image"
@@ -69,6 +71,7 @@
                   Grid.Row="2"
                   Height="30"
                   Width="150"
+                  Text="{Binding PlaceId}"
                   />
 
         
@@ -77,12 +80,19 @@
                    />
         <TextBox x:Name="Description_TextBox"
                  Grid.Row="3"
+                 Text="{Binding Description}"
                  />
 
 
         <Button Name="Ok_Button"
                 Click="Ok_Button_Click"
                 Content="Ok"
+                Grid.Row="4"/>
+
+        <Button Name="Update_Button"
+                Click="Update_Button_Click"
+                Content="Update"
+                HorizontalAlignment="Right"
                 Grid.Row="4"/>
 
     </Grid>

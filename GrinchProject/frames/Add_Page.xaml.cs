@@ -36,6 +36,8 @@ namespace GrinchProject.frames
 
             if (character != null)
             {
+
+                Add_Image_Button.Visibility = Visibility.Hidden;
                 this.character = character;
             }
 
@@ -66,7 +68,7 @@ namespace GrinchProject.frames
                 MessageBox.Show(ex.Message);
             }
 
-            mainWindow.MainFrame.Navigate(new CharacterPage(null, mainWindow));
+            mainWindow.MainFrame.Navigate(new CharacterPage(character, mainWindow));
         }
  
 
@@ -93,6 +95,33 @@ namespace GrinchProject.frames
 
                 myStream.Dispose();
             }
+        }
+
+        private void Update_Button_Click(object sender, RoutedEventArgs e)
+        {
+            character.Name = Name_TextBox.Text;
+            character.Description = Description_TextBox.Text;
+            character.ImagePath = Day_Image.Source.ToString();
+
+            character.PlaceId = Int32.Parse(Place_ComboBox.Text);
+
+
+            try
+            {
+                using (GrinchContext db = new GrinchContext())
+                {
+                    db.Characters.Update(character);
+                    db.SaveChanges();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            mainWindow.MainFrame.Navigate(new CharacterPage(character, mainWindow));
+
         }
     }
 }

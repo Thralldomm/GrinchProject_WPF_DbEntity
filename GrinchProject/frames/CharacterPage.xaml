@@ -92,6 +92,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
 
 
@@ -130,6 +131,11 @@
                                 Content="Info"
                                 Height="20"
                                 Width="100"/>
+
+                        <Button Name="Update_Button"
+                                Content="Update"
+                                Click="Update_Button_Click"
+                                 Grid.Row="5"/>
 
                     </Grid>
 

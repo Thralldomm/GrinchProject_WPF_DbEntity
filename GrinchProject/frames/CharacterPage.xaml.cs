@@ -91,5 +91,10 @@ namespace GrinchProject.frames
             }
             
         }
+
+        private void Update_Button_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.MainFrame.Navigate(new Add_Page((sender as Button).DataContext as Character, mainWindow));
+        }
     }
 }
