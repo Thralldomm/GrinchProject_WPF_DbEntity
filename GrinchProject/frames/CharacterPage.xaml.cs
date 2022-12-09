@@ -35,7 +35,23 @@ namespace GrinchProject.frames
 
                 Main_Character_Grid.DataContext = character;
 
-                
+
+                ////////////////////////
+                List<string> l = new List<string>();
+
+                l.Add("Default");
+                l.Add("Ascending");
+                l.Add("Descending");
+
+                Sort_ComboBox.ItemsSource = l;
+
+                Sort_ComboBox.SelectedIndex = 0;
+                ////////////////////////
+
+                var s = db.Places.Select(b => b.Area).Distinct().ToList();
+                s.Insert(0, "None");
+                Filter_ComboBox.ItemsSource = s;
+
             }
 
             //TODO: Поменять в xaml placeId на название места
@@ -105,6 +121,47 @@ namespace GrinchProject.frames
                  
                 Character_ListView.ItemsSource = found;
             }
+        }
+
+        private void Sort_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // switch ... case
+
+            using(GrinchContext db = new GrinchContext())
+            {
+                if(Sort_ComboBox.SelectedIndex == 0)
+                {
+                    Character_ListView.ItemsSource = db.Characters.ToList();
+                }
+                if(Sort_ComboBox.SelectedIndex == 1)
+                {
+                    Character_ListView.ItemsSource = db.Characters.ToList().OrderBy(b => b.Name);
+                }
+                if (Sort_ComboBox.SelectedIndex == 2)
+                {
+                    Character_ListView.ItemsSource = db.Characters.ToList().OrderByDescending(b => b.Name);
+                }
+            }
+            
+        }
+
+         
+        private void Filter_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+              MessageBox.Show(Filter_ComboBox.SelectedValue.ToString());
+
+            using(GrinchContext db = new GrinchContext())
+            {
+                Place p = db.Places.Where(b => b.Area == Filter_ComboBox.SelectedValue.ToString()).FirstOrDefault();
+
+                var characters = db.Characters.Where(b => b.PlaceId == p.Id).ToList();
+
+                Character_ListView.ItemsSource = characters;
+                
+
+            }
+
         }
     }
 }

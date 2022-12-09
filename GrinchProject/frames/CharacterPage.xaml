@@ -81,10 +81,12 @@
 
             <TextBlock Name="Sort" Grid.Column="0"/>
             <ComboBox Name="Sort_ComboBox"
+                      SelectionChanged="Sort_ComboBox_SelectionChanged"
                       Grid.Column="0"/>
             
             <TextBlock x:Name="Filter" Grid.Column="1"/>
             <ComboBox Name="Filter_ComboBox"
+                      SelectionChanged="Filter_ComboBox_SelectionChanged"
                       Grid.Column="1"/>
 
             <TextBlock Name="Search" Grid.Column="2"/>
